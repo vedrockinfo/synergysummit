@@ -87,7 +87,7 @@
             <div class="col-md-6">
               
               <h6 class="secondaru-hero">
-                <span>Synergy <br>Summit 2.0</span>
+                <span>Synergy Summit 2.0</span>
               </h6>
               <span class="summit-date">10-12 January 2024</span>
               <h4 class="top-hero-content">Making India 100% Literate</h4>

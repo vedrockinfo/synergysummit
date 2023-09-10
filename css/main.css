@@ -443,6 +443,11 @@ p {
     padding-top: 60px;
   }
 }
+@media screen and (max-width: 991.8px) {
+  .hero-section.for-desktop .container-fluid .col-md-6:first-child {
+    padding-left: 5.5%;
+  }
+}
 .hero-section.for-desktop .hero-side {
   position: relative;
   display: grid;
@@ -556,7 +561,7 @@ p {
   text-transform: uppercase;
   color: #fcd000;
   text-shadow: 0 4px 3px rgba(0, 0, 0, 0.45);
-  font-size: 50px;
+  font-size: 38px;
   line-height: 1;
 }
 @media screen and (max-width: 575px) {
@@ -572,14 +577,14 @@ p {
   margin-bottom: 30px;
 }
 .hero-section h4.top-hero-content {
-  font-size: 22px;
+  font-size: 36px;
   font-weight: 700;
   color: #11823b;
   margin-bottom: 7px;
 }
 @media screen and (min-width: 1200px) {
   .hero-section h4.top-hero-content {
-    font-size: 36px;
+    font-size: 40px;
   }
 }
 .hero-section p.hero-para {
