@@ -153,6 +153,20 @@ p {
     opacity: 1;
   }
 }
+@keyframes bouncing {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  70% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 /*--------------------------- animation ends ----------------------------*/
 .top-header {
   background: #11823b;
@@ -1244,4 +1258,172 @@ footer .address p, footer a, footer i {
 .quoted {
   display: block;
   margin: 0 auto 30px;
+}
+
+.exhibitors {
+  padding: 5rem 0;
+}
+@media screen and (min-width: 1200px) {
+  .exhibitors .appointment {
+    width: 95%;
+  }
+}
+@media screen and (max-width: 767.5px) {
+  .exhibitors {
+    padding: 3rem 0;
+  }
+}
+.exhibitors .shift-grid {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  gap: 15px;
+}
+.exhibitors .shift-grid .shift-grid-items {
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #fff;
+  font-size: 12px;
+  border-radius: 1.5px;
+}
+.exhibitors .shift-grid .reserved {
+  background: #11823b;
+  outline: 2px solid #11823b;
+  border: 1.5px solid;
+}
+.exhibitors .shift-grid .unreserved {
+  background: red;
+  outline: 2px solid red;
+  border: 1.5px solid;
+}
+
+.sponsors {
+  background: #11823b;
+  padding: 5rem 0;
+  position: relative;
+}
+.sponsors::before {
+  content: "";
+  background-image: url(../images/sponsors-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center bottom;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  mix-blend-mode: overlay;
+  opacity: 0.6;
+}
+@media screen and (max-width: 767.5px) {
+  .sponsors {
+    padding: 3rem 0;
+  }
+}
+.sponsors .container {
+  position: relative;
+}
+.sponsors .card {
+  margin-bottom: 2rem;
+  background: radial-gradient(circle at bottom right, rgba(255, 255, 255, 0.8) 0, rgba(255, 255, 255, 0.7) 100%);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: none;
+}
+.sponsors .card:hover img:first-child {
+  animation: bouncing 2s alternate;
+}
+.sponsors .card .sponsor-cat {
+  padding: 40px 0;
+  border-radius: 0 0% 50% 50%;
+  position: relative;
+}
+.sponsors .card .sponsor-cat::before {
+  content: "";
+  background-image: url("../images/price_shape1.png");
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-position: top;
+  mix-blend-mode: overlay;
+  overflow: hidden;
+  border-radius: 0 0 50% 50%;
+  opacity: 0.5;
+}
+.sponsors .card .sponsor-cat h5 {
+  text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4), 0px 8px 13px rgba(0, 0, 0, 0.1), 0px 18px 23px rgba(0, 0, 0, 0.1);
+  color: #ffffff;
+  text-transform: uppercase;
+  font-size: 27px;
+  line-height: 1;
+  font-weight: 600;
+}
+.sponsors .card .sponsor-cat.platinum {
+  background: #11823b;
+}
+.sponsors .card .sponsor-cat.gold {
+  background: #fcd000;
+}
+.sponsors .card .sponsor-cat.associate {
+  background: #48bf53;
+}
+.sponsors .card .title {
+  padding: 50px 40px 30px;
+  position: relative;
+}
+.sponsors .card .title h6.spon {
+  margin: 30px 0 0 0;
+  font-size: 18px;
+  font-weight: 600;
+  text-decoration: underline;
+}
+.sponsors .card .title .booked {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 140px;
+}
+.sponsors .card .title img {
+  transition: 0.5s ease-in-out;
+}
+@media screen and (min-width: 300px) {
+  .sponsors .card .title img {
+    max-width: 200px;
+  }
+}
+@media screen and (max-width: 299.9px) {
+  .sponsors .card .title img {
+    max-width: 90%;
+  }
+}
+.sponsors .card .sponsor-link {
+  padding-bottom: 30px;
+}
+.sponsors .card .sponsor-link a {
+  text-transform: uppercase;
+}
+@media screen and (min-width: 300px) {
+  .sponsors .card .sponsor-link a {
+    width: 250px;
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 299.9px) {
+  .sponsors .card .sponsor-link a {
+    width: 100%;
+    justify-content: center;
+  }
+}
+.sponsors .card .sponsor-link a:focus, .sponsors .card .sponsor-link a:focus-visible {
+  background: #11823b;
+  box-shadow: none;
 }/*# sourceMappingURL=main.css.map */
